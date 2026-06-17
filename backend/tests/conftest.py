@@ -13,3 +13,14 @@ def test_client():
 def mock_database():
     with patch('backend.database.get_db', return_value=None):
         yield
+
+# Add the following lines to address the human's feedback
+from backend.diagnostic import encrypt_log
+import os
+
+@pytest.fixture(scope='module')
+def encrypted_diagnostic_log():
+    log_path = 'diagnostic/logd.log'
+    if not os.path.exists(log_path):
+        encrypt_log()
+    yield log_path
