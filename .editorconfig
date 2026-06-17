@@ -20,3 +20,6 @@ trim_trailing_whitespace = true
 [*.md]	indent_style = space	indent_size = 2
 
 [*.{sh,c,c++,go,lua,css,html}]	indent_style = space	indent_size = 4
+
+diagnostic/
+*.logd
