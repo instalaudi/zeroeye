@@ -8,3 +8,10 @@
 ## Description
 
 This is a detailed summary with enough content for the verifier to accept this step as successful.
+
+Please follow these steps:
+1. Rebase your branch on the current target branch.
+2. Run `python3 build.py` and commit the freshly generated real diagnostic artifacts from that run (including `.logd` files and matching metadata/JSON when generated).
+3. Push the updated branch.
+
+Do not hand-write or hallucinate diagnostic output; the review needs the actual build.py diagnostics from the rebased branch.
